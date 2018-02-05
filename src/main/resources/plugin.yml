@@ -1,0 +1,9 @@
+name: message-logger
+main: net.twasiplugin.messagelogger.MessageLoggerPlugin
+author: Twasi Team
+description: Logs all messages of your chat
+version: 1.0
+
+messageHandler: true
+
+commands:
