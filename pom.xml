@@ -20,6 +20,14 @@
         </plugins>
     </build>
 
+    <dependencies>
+        <dependency>
+            <groupId>net.twasi</groupId>
+            <artifactId>TwasiCore</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
     <repositories>
         <repository>
             <snapshots>
@@ -36,13 +44,5 @@
             <url>https://artifactory.twasi.net/artifactory/libs-snapshot</url>
         </repository>
     </repositories>
-
-    <dependencies>
-        <dependency>
-            <groupId>net.twasi</groupId>
-            <artifactId>TwasiCore</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 
 </project>

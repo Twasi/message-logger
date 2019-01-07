@@ -1,19 +1,16 @@
 package net.twasiplugin.dependency.messagelogger;
 
+import net.twasi.core.events.IncomingMessageEvent;
 import net.twasi.core.events.NewInstanceEvent;
 import net.twasi.core.events.TwasiEventHandler;
 import net.twasi.core.interfaces.api.TwasiInterface;
-import net.twasi.core.interfaces.events.IncomingMessageEvent;
 import net.twasi.core.logger.TwasiLogger;
 import net.twasi.core.models.Message.TwasiMessage;
 import net.twasi.core.plugin.TwasiDependency;
 import net.twasi.core.services.ServiceRegistry;
 import net.twasi.core.services.providers.DataService;
 import net.twasi.core.services.providers.InstanceManagerService;
-import net.twasiplugin.dependency.messagelogger.database.entities.LoggedUserMessage;
 import net.twasiplugin.dependency.messagelogger.database.repositories.MessageLoggerRepository;
-
-import java.util.Calendar;
 
 public class MessageLoggerDependency extends TwasiDependency {
 
@@ -34,19 +31,10 @@ public class MessageLoggerDependency extends TwasiDependency {
         twasiInterface.getMessageReader().registerIncomingMessageHandler(new TwasiEventHandler<IncomingMessageEvent>() {
             @Override
             public void on(IncomingMessageEvent incomingMessageEvent) {
-                TwasiMessage message = incomingMessageEvent.getMessage();
-                TwasiLogger.log.debug("New message from user " + message.getSender().getUserName() + " in chat " + message.getTwasiInterface().getStreamer().getUser().getTwitchAccount().getUserName() + ": " + message.getMessage());
-                LoggedUserMessage messageEntity = new LoggedUserMessage(
-                        message.getTwasiInterface().getStreamer().getUser(),
-                        message.getSender().getTwitchId(),
-                        message.getSender().getDisplayName(),
-                        Calendar.getInstance().getTime(),
-                        message.getMessage()
-                );
-                repository.add(messageEntity);
-                repository.commitAll();
+                TwasiMessage twasiMessage = incomingMessageEvent.getMessage();
             }
         });
+        twasiInterface.getCommunicationHandler().registerOutgoingMessageHandler(null);
     }
 
 }
