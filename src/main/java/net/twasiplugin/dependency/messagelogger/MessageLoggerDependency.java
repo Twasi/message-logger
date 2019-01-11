@@ -1,9 +1,9 @@
 package net.twasiplugin.dependency.messagelogger;
 
+import net.twasi.core.events.IncomingMessageEvent;
 import net.twasi.core.events.NewInstanceEvent;
 import net.twasi.core.events.TwasiEventHandler;
 import net.twasi.core.interfaces.api.TwasiInterface;
-import net.twasi.core.interfaces.events.IncomingMessageEvent;
 import net.twasi.core.logger.TwasiLogger;
 import net.twasi.core.models.Message.TwasiMessage;
 import net.twasi.core.plugin.TwasiDependency;
