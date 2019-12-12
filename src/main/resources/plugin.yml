@@ -1,7 +1,7 @@
 name: message-logger
 main: net.twasiplugin.dependency.messagelogger.MessageLoggerDependency
 author: Twasi Team
-description: Logs all messages of every chat
+description: Logs all messages (and other events) of every chat
 version: 1.0
 
 dependency: true
