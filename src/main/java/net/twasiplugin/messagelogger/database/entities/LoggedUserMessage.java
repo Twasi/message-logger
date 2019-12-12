@@ -1,7 +1,7 @@
-package net.twasiplugin.dependency.messagelogger.database.entities;
+package net.twasiplugin.messagelogger.database.entities;
 
 import net.twasi.core.database.models.User;
-import net.twasiplugin.dependency.messagelogger.database.LoggedMessageType;
+import net.twasiplugin.messagelogger.database.LoggedMessageType;
 
 import java.util.Date;
 

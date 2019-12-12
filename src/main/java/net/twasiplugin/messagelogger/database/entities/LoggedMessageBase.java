@@ -1,8 +1,8 @@
-package net.twasiplugin.dependency.messagelogger.database.entities;
+package net.twasiplugin.messagelogger.database.entities;
 
 import net.twasi.core.database.models.BaseEntity;
 import net.twasi.core.database.models.User;
-import net.twasiplugin.dependency.messagelogger.database.LoggedMessageType;
+import net.twasiplugin.messagelogger.database.LoggedMessageType;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Reference;
 

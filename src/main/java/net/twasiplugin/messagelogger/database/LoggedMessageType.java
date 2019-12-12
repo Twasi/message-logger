@@ -1,4 +1,4 @@
-package net.twasiplugin.dependency.messagelogger.database;
+package net.twasiplugin.messagelogger.database;
 
 public enum LoggedMessageType {
     BOTMESSAGE,
