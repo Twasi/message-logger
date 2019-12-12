@@ -30,7 +30,7 @@
             <url>https://artifactory.twasi.net/artifactory/libs-release</url>
         </repository>
         <repository>
-            <snapshots />
+            <snapshots/>
             <id>snapshots</id>
             <name>libs-snapshot</name>
             <url>https://artifactory.twasi.net/artifactory/libs-snapshot</url>
@@ -40,9 +40,8 @@
     <dependencies>
         <dependency>
             <groupId>net.twasi</groupId>
-            <artifactId>TwasiCore</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <artifactId>twasi-core</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
-
 </project>
